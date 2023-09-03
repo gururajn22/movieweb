@@ -88,3 +88,8 @@ nav {
     padding: 10px;
   }
 }
+.dark{
+  background-color: black;
+  color: white;
+}
+

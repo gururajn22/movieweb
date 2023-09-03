@@ -5,13 +5,15 @@ import Movie from "./src/components/Movie";
 import Error from "./src/components/Error";
 import Product from "./src/components/Product";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-
+import { ChakraProvider } from '@chakra-ui/react'
 import AboutClass from "./src/components/AboutClass";
 const AppLayout = () => {
   return (
     <div>
+        <ChakraProvider>
       <Header />
       <Outlet />
+      </ChakraProvider>
     </div>
   );
 };

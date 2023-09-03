@@ -1,6 +1,7 @@
 import "../../style.css";
 import { Link } from "react-router-dom";
 import useOnline from "../../utils/useOnline";
+import Theme from "./Theme";
 const Header = () => {
   const showOnline = useOnline();
   return (
@@ -12,9 +13,11 @@ const Header = () => {
         <div className="mid">
           <Link to="/product">Product</Link>
           <Link to="/about">About Us</Link>
+   
         </div>
         <div className="right">
-          <p>online Status:{showOnline ? "✅" : "🔴"}</p>
+          <p className="online">online Status:{showOnline ? "✅" : "🔴"}</p>
+          <div className="theme">{<Theme/>}</div>
         </div>
       </nav>
     </>
